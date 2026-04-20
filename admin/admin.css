@@ -1,0 +1,607 @@
+/* ============================================
+   Golden Grill — Admin Dashboard Styles
+   Extends the main Dark Luxury design tokens
+   ============================================ */
+
+/* Import Google Fonts (same as main) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ============================================
+   ADMIN NAVIGATION
+   ============================================ */
+.admin-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32px;
+  height: 64px;
+  background: rgba(13, 13, 26, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+
+.admin-nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.admin-nav__logout {
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.admin-nav__logout:hover {
+  color: var(--danger);
+  border-color: var(--danger);
+  background: rgba(239, 68, 68, 0.05);
+}
+
+.admin-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.admin-nav__badge {
+  padding: 6px 16px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--gold);
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid var(--border-gold);
+  border-radius: 50px;
+}
+
+/* ============================================
+   DASHBOARD LAYOUT
+   ============================================ */
+.dashboard {
+  padding: 88px 32px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.dashboard__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.dashboard__title {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dashboard__subtitle {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-top: 4px;
+}
+
+/* Stats Cards */
+.dashboard__stats {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 24px;
+  text-align: center;
+  min-width: 140px;
+  transition: var(--transition);
+}
+
+.stat-card:hover {
+  border-color: var(--border-gold);
+  box-shadow: var(--shadow-gold);
+}
+
+.stat-card__value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--gold);
+  font-family: var(--font-heading);
+}
+
+.stat-card__label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 4px;
+}
+
+/* Two-Column Grid */
+.dashboard__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* ============================================
+   PANEL (Shared Card Component)
+   ============================================ */
+.panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.panel__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.panel__title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.panel__body {
+  padding: 16px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.panel__empty {
+  text-align: center;
+  padding: 48px 20px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.panel__empty-icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  opacity: 0.5;
+}
+
+/* ============================================
+   ORDER CARD
+   ============================================ */
+.order-card {
+  background: var(--bg-dark);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  margin-bottom: 12px;
+  transition: var(--transition);
+  animation: fade-in-up 0.4s ease-out both;
+}
+
+.order-card:hover {
+  border-color: var(--border-gold);
+}
+
+.order-card:last-child {
+  margin-bottom: 0;
+}
+
+.order-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.order-card__id {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--gold);
+}
+
+.order-card__time {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.order-card__customer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.order-card__table-badge {
+  padding: 4px 10px;
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--gold);
+  border: 1px solid var(--border-gold);
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.order-card__items {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+}
+
+.order-card__items span {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.order-card__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-card__total {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--gold);
+}
+
+.order-card__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.order-card__status {
+  padding: 4px 14px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--gold);
+  border: 1px solid var(--border-gold);
+}
+
+.order-card__status--completed {
+  background: rgba(34, 197, 94, 0.1);
+  color: var(--success);
+  border-color: rgba(34, 197, 94, 0.3);
+}
+
+.order-card__status--cancelled {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--danger);
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.order-card__actions .btn--outline {
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+/* ============================================
+   MENU ITEM ROW (Admin list)
+   ============================================ */
+.menu-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  background: var(--bg-dark);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 10px;
+  transition: var(--transition);
+  animation: fade-in-up 0.3s ease-out both;
+}
+
+.menu-row:hover {
+  border-color: var(--border-gold);
+}
+
+.menu-row:last-child {
+  margin-bottom: 0;
+}
+
+.menu-row__emoji {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.menu-row__info {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.menu-row__name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.menu-row__meta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.menu-row__price {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.menu-row__delete {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.menu-row__delete:hover {
+  border-color: var(--danger);
+  color: var(--danger);
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.menu-row__edit {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.menu-row__edit:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(245, 158, 11, 0.1);
+}
+
+/* ============================================
+   ADD ITEM FORM
+   ============================================ */
+.add-item-form {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(245, 158, 11, 0.03);
+  animation: slide-down 0.3s ease-out;
+}
+
+@keyframes slide-down {
+  from { opacity: 0; max-height: 0; padding-top: 0; padding-bottom: 0; }
+  to { opacity: 1; max-height: 500px; }
+}
+
+.add-item-form__title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.add-item-form__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.form-group select.order-form__input {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238888a0' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+}
+
+.add-item-form__actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+/* ============================================
+   TOAST OVERRIDE FOR ADMIN
+   ============================================ */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 3000;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 900px) {
+  .dashboard__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dashboard__stats {
+    width: 100%;
+  }
+
+  .stat-card {
+    flex: 1;
+    min-width: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard {
+    padding: 80px 16px 24px;
+  }
+
+  .admin-nav {
+    padding: 0 16px;
+  }
+
+  .add-item-form__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-row {
+    flex-wrap: wrap;
+  }
+
+  .order-card__top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
+/* ============================================
+   REVENUE & SUMMARY STYLES
+   ============================================ */
+
+.stat-card--today {
+  border-color: var(--border-gold);
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.05), transparent);
+  box-shadow: var(--shadow-gold-sm);
+  min-width: 180px;
+}
+
+.stat-card--today .stat-card__value {
+  color: var(--gold-light);
+  text-shadow: 0 0 15px rgba(245, 158, 11, 0.3);
+}
+
+.summary-row {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  align-items: center;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: var(--transition);
+}
+
+.summary-row:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: var(--border-gold);
+}
+
+.summary-row__date {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.summary-row__revenue {
+  font-weight: 700;
+  color: var(--gold);
+  text-align: center;
+}
+
+.summary-row__count {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: right;
+}
+
+#order-date-filter {
+  color-scheme: dark; /* Ensures the native calendar icon and picker are dark-themed */
+  cursor: pointer;
+}
+
+/* Update dashboard grid for 3 columns on wide screens if needed, 
+   but user wanted to keep it simple, so we'll let it stack or use 2 columns 
+   with the third one below or side-by-side depending on screen width. */
+@media (min-width: 1200px) {
+  .dashboard__grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 900px) {
+  .dashboard__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  #revenue-panel {
+    grid-column: span 2;
+  }
+}

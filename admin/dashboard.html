@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Golden Grill Admin Dashboard — Manage orders, menu items, and view analytics.">
+  <title>Admin Dashboard — Golden Grill</title>
+  <link rel="stylesheet" href="../frontend/style.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+  <!-- ========== ADMIN NAVBAR ========== -->
+  <nav class="admin-nav" id="admin-nav">
+    <a href="../frontend/index.html" class="admin-nav__logo">
+      <span>🔥</span> Golden Grill
+    </a>
+    <div class="admin-nav__actions">
+      <span class="admin-nav__badge">Admin Panel</span>
+      <button id="logout-btn" class="admin-nav__logout">🚪 Logout</button>
+    </div>
+  </nav>
+
+  <!-- ========== MAIN DASHBOARD ========== -->
+  <main class="dashboard">
+
+    <!-- Header -->
+    <header class="dashboard__header">
+      <div>
+        <h1 class="dashboard__title">Dashboard</h1>
+        <p class="dashboard__subtitle">Manage your restaurant in real-time</p>
+      </div>
+      <div class="dashboard__stats">
+        <div class="stat-card stat-card--today">
+          <div class="stat-card__value" id="stat-revenue-today">$0.00</div>
+          <div class="stat-card__label">Today's Revenue</div>
+        </div>
+        <div id="stats-bar" style="display: flex; gap: 16px;">
+          <!-- Other stats populated by JS -->
+        </div>
+      </div>
+    </header>
+
+    <!-- Dashboard Layout -->
+    <div class="dashboard__grid">
+
+      <!-- ===== ORDERS PANEL ===== -->
+      <section class="panel" id="orders-panel">
+        <div class="panel__header">
+          <h2 class="panel__title">📋 Recent Orders</h2>
+          <div style="display: flex; gap: 8px; align-items: center;">
+            <input type="date" id="order-date-filter" class="order-form__input" style="width: auto; margin: 0; padding: 5px 10px; font-size: 0.85rem;">
+            <button class="btn btn--small btn--outline" id="refresh-orders-btn">↻ Refresh</button>
+          </div>
+        </div>
+        <div class="panel__body" id="orders-list">
+          <div class="panel__empty">Loading orders...</div>
+        </div>
+      </section>
+
+      <!-- ===== REVENUE SUMMARY PANEL ===== -->
+      <section class="panel" id="revenue-panel">
+        <div class="panel__header">
+          <h2 class="panel__title">📁 Daily Breakdown</h2>
+        </div>
+        <div class="panel__body" id="daily-summary">
+          <div class="panel__empty">Gathering stats...</div>
+        </div>
+      </section>
+
+      <!-- ===== MENU MANAGEMENT PANEL ===== -->
+      <section class="panel" id="menu-panel">
+        <div class="panel__header">
+          <h2 class="panel__title">🍔 Menu Items</h2>
+          <button class="btn btn--small btn--primary" id="toggle-add-form-btn">+ Add Item</button>
+        </div>
+
+        <!-- Add Item Form (hidden by default) -->
+        <div class="add-item-form" id="add-item-form" style="display: none;">
+          <h3 class="add-item-form__title" id="form-title">New Menu Item</h3>
+          <input type="hidden" id="item-id" value="">
+          <div class="add-item-form__grid">
+            <div class="form-group">
+              <label for="item-name">Name *</label>
+              <input type="text" id="item-name" class="order-form__input" placeholder="e.g. Truffle Burger">
+            </div>
+            <div class="form-group">
+              <label for="item-price">Price *</label>
+              <input type="number" id="item-price" class="order-form__input" placeholder="e.g. 14.99" step="0.01" min="0">
+            </div>
+            <div class="form-group">
+              <label for="item-category">Category *</label>
+              <select id="item-category" class="order-form__input">
+                <option value="Burgers">🍔 Burgers</option>
+                <option value="BBQ">🍖 BBQ</option>
+                <option value="Sides">🍟 Sides</option>
+                <option value="Drinks">🥤 Drinks</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="item-image">Emoji Icon</label>
+              <input type="text" id="item-image" class="order-form__input" placeholder="e.g. 🍔" maxlength="4">
+            </div>
+          </div>
+          <div class="form-group" style="margin-top: 12px;">
+            <label for="item-desc">Description</label>
+            <input type="text" id="item-desc" class="order-form__input" placeholder="Short description of the dish">
+          </div>
+          <div class="add-item-form__actions">
+            <button class="btn btn--primary" id="save-item-btn">Save Item</button>
+            <button class="btn btn--outline" id="cancel-add-btn">Cancel</button>
+          </div>
+        </div>
+
+        <!-- Menu Items List -->
+        <div class="panel__body" id="menu-list">
+          <div class="panel__empty">Loading menu...</div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>

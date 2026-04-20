@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your cart — review your order, add your name, and place an order at Golden Grill.">
+  <title>Cart — Golden Grill</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="navbar__logo">
+      <span class="navbar__logo-icon">🔥</span>
+      Golden Grill
+    </a>
+
+    <button class="navbar__toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="navbar__links" id="nav-links">
+      <a href="index.html" class="navbar__link">Home</a>
+      <a href="menu.html" class="navbar__link">Menu</a>
+      <a href="cart.html" class="navbar__link navbar__link--cart active">
+        🛒 Cart <span class="cart-badge" id="cart-count">0</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ========== CART PAGE ========== -->
+  <main class="cart-page section">
+    <div class="section__header">
+      <span class="section__label">Your Order</span>
+      <h1 class="section__title">Shopping Cart</h1>
+    </div>
+
+    <div class="cart-container">
+      <!-- Cart items will be rendered here by script.js -->
+      <div id="cart-content">
+        <!-- Initially shows empty state -->
+      </div>
+    </div>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer__content">
+      <div>
+        <div class="footer__brand">🔥 Golden Grill</div>
+        <p class="footer__desc">
+          Premium American restaurant serving flame-kissed burgers, slow-smoked BBQ, and craft sides since 1985.
+        </p>
+      </div>
+      <div>
+        <h4 class="footer__heading">Quick Links</h4>
+        <a href="index.html" class="footer__link">Home</a>
+        <a href="menu.html" class="footer__link">Menu</a>
+        <a href="cart.html" class="footer__link">Cart</a>
+      </div>
+      <div>
+        <h4 class="footer__heading">Hours</h4>
+        <p class="footer__link">Mon—Fri: 11AM – 10PM</p>
+        <p class="footer__link">Sat—Sun: 10AM – 11PM</p>
+        <p class="footer__link">📍 123 Grill Street</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      &copy; 2026 Golden Grill. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

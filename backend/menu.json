@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "name": "Classic Smash Burger",
+    "description": "Double smashed beef patties, American cheese, pickles, secret sauce on a brioche bun",
+    "price": 12.99,
+    "category": "Burgers",
+    "image": "🍔"
+  },
+  {
+    "id": 2,
+    "name": "Golden BBQ Burger",
+    "description": "Angus beef, crispy onion rings, cheddar, smoky BBQ glaze",
+    "price": 14.99,
+    "category": "Burgers",
+    "image": "🍔"
+  },
+  {
+    "id": 3,
+    "name": "Bacon Inferno Burger",
+    "description": "Pepper jack cheese, jalapeños, hickory bacon, chipotle aioli",
+    "price": 15.49,
+    "category": "Burgers",
+    "image": "🔥"
+  },
+  {
+    "id": 4,
+    "name": "Mushroom Swiss Burger",
+    "description": "Sautéed mushrooms, Swiss cheese, garlic herb butter, arugula",
+    "price": 13.99,
+    "category": "Burgers",
+    "image": "🍄"
+  },
+  {
+    "id": 5,
+    "name": "Slow-Smoked Ribs",
+    "description": "Full rack of baby back ribs, 12-hour smoke, house dry rub, Golden Grill sauce",
+    "price": 24.99,
+    "category": "BBQ",
+    "image": "🍖"
+  },
+  {
+    "id": 6,
+    "name": "Pulled Pork Platter",
+    "description": "Hickory-smoked pulled pork, tangy coleslaw, cornbread, pickles",
+    "price": 16.99,
+    "category": "BBQ",
+    "image": "🥩"
+  },
+  {
+    "id": 7,
+    "name": "Grilled Ribeye Steak",
+    "description": "16oz prime ribeye, flame-grilled, herb butter, roasted garlic",
+    "price": 32.99,
+    "category": "BBQ",
+    "image": "🥩"
+  },
+  {
+    "id": 8,
+    "name": "BBQ Chicken Wings",
+    "description": "Crispy jumbo wings tossed in smoky honey-BBQ glaze, ranch dip",
+    "price": 13.99,
+    "category": "BBQ",
+    "image": "🍗"
+  },
+  {
+    "id": 9,
+    "name": "Loaded Fries",
+    "description": "Crispy golden fries, cheddar sauce, bacon bits, jalapeños, sour cream",
+    "price": 8.99,
+    "category": "Sides",
+    "image": "🍟"
+  },
+  {
+    "id": 10,
+    "name": "Onion Rings Tower",
+    "description": "Beer-battered thick-cut onion rings, spicy ketchup",
+    "price": 7.99,
+    "category": "Sides",
+    "image": "🧅"
+  },
+  {
+    "id": 11,
+    "name": "Mac & Cheese",
+    "description": "Creamy four-cheese blend, crispy breadcrumb topping, truffle oil drizzle",
+    "price": 9.49,
+    "category": "Sides",
+    "image": "🧀"
+  },
+  {
+    "id": 12,
+    "name": "Coleslaw",
+    "description": "Crunchy cabbage, carrots, tangy house dressing",
+    "price": 4.99,
+    "category": "Sides",
+    "image": "🥗"
+  },
+  {
+    "id": 13,
+    "name": "Golden Lemonade",
+    "description": "Fresh-squeezed lemonade with honey and mint",
+    "price": 4.99,
+    "category": "Drinks",
+    "image": "🍋"
+  },
+  {
+    "id": 14,
+    "name": "Classic Milkshake",
+    "description": "Thick & creamy vanilla, chocolate, or strawberry shake",
+    "price": 6.99,
+    "category": "Drinks",
+    "image": "🥤"
+  },
+  {
+    "id": 15,
+    "name": "Craft Root Beer",
+    "description": "House-made small-batch root beer, served ice cold",
+    "price": 3.99,
+    "category": "Drinks",
+    "image": "🍺"
+  },
+  {
+    "id": 16,
+    "name": "Iced Tea",
+    "description": "Southern-style sweet iced tea with lemon",
+    "price": 3.49,
+    "category": "Drinks",
+    "image": "🧊"
+  },
+  {
+    "id": 17,
+    "name": "Spicy Ghost Burger",
+    "description": "Super hot burger with ghost pepper sauce",
+    "price": 16.99,
+    "category": "Burgers",
+    "image": "🌶️"
+  },
+  {
+    "id": 18,
+    "name": "Truffle Burger",
+    "description": "",
+    "price": 14.99,
+    "category": "Burgers",
+    "image": "🍽️"
+  }
+]

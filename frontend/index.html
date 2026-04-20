@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Golden Grill — Premium American restaurant. Flame-kissed burgers, slow-smoked BBQ, and craft sides. Order online for pickup or delivery.">
+  <title>Golden Grill — Flame-Kissed Perfection</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="navbar__logo">
+      <span class="navbar__logo-icon">🔥</span>
+      Golden Grill
+    </a>
+
+    <button class="navbar__toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="navbar__links" id="nav-links">
+      <a href="index.html" class="navbar__link active">Home</a>
+      <a href="menu.html" class="navbar__link">Menu</a>
+      <a href="cart.html" class="navbar__link navbar__link--cart">
+        🛒 Cart <span class="cart-badge" id="cart-count">0</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="hero">
+    <div class="hero__content">
+      <div class="hero__badge">🏆 Voted #1 Grill in Town</div>
+      <h1 class="hero__title">
+        <span>Golden Grill</span>
+      </h1>
+      <p class="hero__subtitle">
+        Flame-kissed burgers, slow-smoked BBQ, and handcrafted sides. 
+        Every bite tells a story of fire and flavor.
+      </p>
+      <div class="hero__actions">
+        <a href="menu.html" class="btn btn--primary">View Our Menu 🍽️</a>
+        <a href="#preview" class="btn btn--outline">Explore ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MENU PREVIEW ========== -->
+  <section class="section menu-preview" id="preview">
+    <div class="section__header">
+      <span class="section__label">Our Kitchen</span>
+      <h2 class="section__title">What We're Serving</h2>
+      <p class="section__desc">From sizzling burgers to fall-off-the-bone ribs — crafted with passion, served with pride.</p>
+    </div>
+
+    <div class="categories-grid">
+      <a href="menu.html#Burgers" class="category-card">
+        <span class="category-card__icon">🍔</span>
+        <h3 class="category-card__name">Burgers</h3>
+        <p class="category-card__count">Smashed, stacked & loaded</p>
+      </a>
+      <a href="menu.html#BBQ" class="category-card">
+        <span class="category-card__icon">🍖</span>
+        <h3 class="category-card__name">BBQ</h3>
+        <p class="category-card__count">Low & slow perfection</p>
+      </a>
+      <a href="menu.html#Sides" class="category-card">
+        <span class="category-card__icon">🍟</span>
+        <h3 class="category-card__name">Sides</h3>
+        <p class="category-card__count">Crispy, cheesy favorites</p>
+      </a>
+      <a href="menu.html#Drinks" class="category-card">
+        <span class="category-card__icon">🥤</span>
+        <h3 class="category-card__name">Drinks</h3>
+        <p class="category-card__count">Ice cold refreshments</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- ========== FEATURES BAR ========== -->
+  <section class="section features">
+    <div class="features-grid">
+      <div class="feature-item">
+        <span class="feature-item__icon">🔥</span>
+        <h3 class="feature-item__title">Flame Grilled</h3>
+        <p class="feature-item__desc">Real charcoal fire for authentic smoky flavor</p>
+      </div>
+      <div class="feature-item">
+        <span class="feature-item__icon">🥩</span>
+        <h3 class="feature-item__title">Premium Cuts</h3>
+        <p class="feature-item__desc">USDA Prime beef, fresh daily</p>
+      </div>
+      <div class="feature-item">
+        <span class="feature-item__icon">⚡</span>
+        <h3 class="feature-item__title">Fast Service</h3>
+        <p class="feature-item__desc">Order online, ready in minutes</p>
+      </div>
+      <div class="feature-item">
+        <span class="feature-item__icon">❤️</span>
+        <h3 class="feature-item__title">Made with Love</h3>
+        <p class="feature-item__desc">Family recipes since 1985</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer__content">
+      <div>
+        <div class="footer__brand">🔥 Golden Grill</div>
+        <p class="footer__desc">
+          Premium American restaurant serving flame-kissed burgers, slow-smoked BBQ, and craft sides since 1985. 
+          Every dish is made fresh to order.
+        </p>
+      </div>
+      <div>
+        <h4 class="footer__heading">Quick Links</h4>
+        <a href="index.html" class="footer__link">Home</a>
+        <a href="menu.html" class="footer__link">Menu</a>
+        <a href="cart.html" class="footer__link">Cart</a>
+      </div>
+      <div>
+        <h4 class="footer__heading">Hours</h4>
+        <p class="footer__link">Mon—Fri: 11AM – 10PM</p>
+        <p class="footer__link">Sat—Sun: 10AM – 11PM</p>
+        <p class="footer__link">📍 123 Grill Street</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      &copy; 2026 Golden Grill. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
