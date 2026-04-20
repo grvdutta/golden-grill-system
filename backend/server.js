@@ -173,7 +173,7 @@ app.post('/order', (req, res) => {
 
     // Build the new order object
     const newOrder = {
-      id: Date.now(),
+      id: orders.length > 0 ? Math.max(...orders.map(o => parseInt(o.id) || 0)) + 1 : 101,
       customerName,
       tableNumber,
       items,          // Array of { name, price, quantity }
