@@ -3,7 +3,7 @@
  * Handles: Orders display, Menu management (CRUD), Stats, Revenue Tracking
  */
 
-const API_BASE = 'http://localhost:3000';
+const API_BASE = 'https://golden-grill-system.onrender.com/';
 
 // ==========================================
 //  AUTHENTICATION CHECK
@@ -72,7 +72,7 @@ function normalizeStatus(status) {
 
 function groupOrdersByDate(orders) {
   const groups = {};
-  
+
   orders.forEach(order => {
     const date = getLocalDate(order.timestamp);
     if (!groups[date]) {
@@ -83,7 +83,7 @@ function groupOrdersByDate(orders) {
       groups[date].revenue += parseFloat(order.totalPrice);
     }
   });
-  
+
   return groups;
 }
 
@@ -120,9 +120,9 @@ function renderStats(orders, menuItems) {
   const totalRevenue = orders.reduce((sum, o) => {
     return normalizeStatus(o.status) === 'completed' ? sum + parseFloat(o.totalPrice) : sum;
   }, 0);
-  
+
   const pendingOrders = orders.filter(o => normalizeStatus(o.status) === 'pending').length;
-  
+
   // Calculate Today's Revenue
   const today = getLocalDate(new Date().toISOString());
   const grouped = groupOrdersByDate(orders);
@@ -193,7 +193,7 @@ async function loadOrders() {
 
     ordersList.innerHTML = orders.map((order, i) => {
       const isPending = order.status === 'pending';
-      
+
       return `
       <div class="order-card" style="animation-delay: ${i * 0.05}s">
         <div class="order-card__top">
@@ -212,15 +212,16 @@ async function loadOrders() {
         <div class="order-card__bottom">
           <span class="order-card__total">${formatPrice(order.totalPrice)}</span>
           <div class="order-card__actions">
-            ${isPending 
-              ? `<button class="btn btn--small btn--primary" onclick="updateOrderStatus(${order.id}, 'completed')" style="background: var(--success); border-color: var(--success);">✅ Complete</button>`
-              : `<span class="order-card__status order-card__status--completed">${order.status}</span>`
-            }
+            ${isPending
+          ? `<button class="btn btn--small btn--primary" onclick="updateOrderStatus(${order.id}, 'completed')" style="background: var(--success); border-color: var(--success);">✅ Complete</button>`
+          : `<span class="order-card__status order-card__status--completed">${order.status}</span>`
+        }
             <button class="btn btn--small btn--outline" onclick="deleteOrder(${order.id})" title="Delete/Dismiss Order">🗑️</button>
           </div>
         </div>
       </div>
-    `; }).join('');
+    `;
+    }).join('');
 
     return allOrders;
 

@@ -6,7 +6,7 @@
  * Cart format: [{ id, name, price, image, quantity }]
  */
 
-const API_BASE = 'http://localhost:3000';
+const API_BASE = 'https://golden-grill-system.onrender.com/';
 
 // ==========================================
 //  UTILITY FUNCTIONS
@@ -357,7 +357,7 @@ function renderCartPage() {
 async function placeOrder() {
   const nameInput = document.getElementById('customer-name');
   const tableInput = document.getElementById('table-number');
-  
+
   const customerName = nameInput?.value.trim();
   const tableNumber = tableInput?.value.trim();
 
@@ -367,7 +367,7 @@ async function placeOrder() {
     nameInput.classList.add('input-error');
     hasError = true;
   }
-  
+
   if (!tableNumber) {
     tableInput.classList.add('input-error');
     hasError = true;
