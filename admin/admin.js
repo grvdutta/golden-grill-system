@@ -3,7 +3,7 @@
  * Handles: Orders display, Menu management (CRUD), Stats, Revenue Tracking
  */
 
-const API_BASE = 'https://golden-grill-system.onrender.com/';
+const API_BASE = 'https://golden-grill-system.onrender.com';
 
 // ==========================================
 //  AUTHENTICATION CHECK

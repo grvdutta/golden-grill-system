@@ -6,7 +6,7 @@
  * Cart format: [{ id, name, price, image, quantity }]
  */
 
-const API_BASE = 'https://golden-grill-system.onrender.com/';
+const API_BASE = 'https://golden-grill-system.onrender.com';
 
 // ==========================================
 //  UTILITY FUNCTIONS
