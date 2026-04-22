@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +16,7 @@
       min-height: 100vh;
       background: var(--bg-darkest);
     }
+
     .login-card {
       background: var(--bg-card);
       border: 1px solid var(--border-gold);
@@ -25,12 +27,14 @@
       box-shadow: var(--shadow-gold);
       animation: scale-in 0.4s ease-out;
     }
+
     .login-card__logo {
       font-size: 3rem;
       margin-bottom: 16px;
       display: block;
       text-align: center;
     }
+
     .login-card__title {
       font-family: var(--font-heading);
       font-size: 1.8rem;
@@ -39,6 +43,7 @@
       text-align: center;
       margin-bottom: 32px;
     }
+
     .login-card__error {
       background: rgba(239, 68, 68, 0.1);
       color: var(--danger);
@@ -52,12 +57,13 @@
     }
   </style>
 </head>
+
 <body class="login-page">
 
   <div class="login-card">
     <span class="login-card__logo">🔥</span>
     <h1 class="login-card__title">Admin Login</h1>
-    
+
     <div id="login-error" class="login-card__error">Invalid username or password</div>
 
     <form id="login-form">
@@ -69,18 +75,19 @@
         <label for="password">Password</label>
         <input type="password" id="password" class="order-form__input" placeholder="Enter password" required>
       </div>
-      <button type="submit" class="btn btn--primary" style="width: 100%; justify-content: center; font-size: 1rem; padding: 14px;">
+      <button type="submit" class="btn btn--primary"
+        style="width: 100%; justify-content: center; font-size: 1rem; padding: 14px;">
         Login to Dashboard
       </button>
     </form>
   </div>
 
   <script>
-    const API_BASE = 'http://localhost:3000';
+    const API_BASE = "https://golden-grill-system.onrender.com";
 
     document.getElementById('login-form').addEventListener('submit', async (e) => {
       e.preventDefault();
-      
+
       const username = document.getElementById('username').value;
       const password = document.getElementById('password').value;
       const errorEl = document.getElementById('login-error');
@@ -124,4 +131,5 @@
     }
   </script>
 </body>
+
 </html>
