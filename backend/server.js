@@ -170,15 +170,22 @@ app.post('/order', (req, res) => {
     }
 
     const orders = readJSON('orders.json');
+    const now = new Date();
+    const todayStr = now.toISOString().split('T')[0]; // YYYY-MM-DD
+
+    // Calculate daily sequential order number
+    const todayOrders = orders.filter(o => o.timestamp && o.timestamp.startsWith(todayStr));
+    const dailyOrderNumber = todayOrders.length + 1;
 
     // Build the new order object
     const newOrder = {
       id: orders.length > 0 ? Math.max(...orders.map(o => parseInt(o.id) || 0)) + 1 : 101,
+      dailyOrderNumber: dailyOrderNumber,
       customerName,
       tableNumber,
       items,          // Array of { name, price, quantity }
       totalPrice: parseFloat(totalPrice),
-      timestamp: new Date().toISOString(),
+      timestamp: now.toISOString(),
       status: 'pending'
     };
 

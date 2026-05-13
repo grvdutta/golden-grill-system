@@ -197,7 +197,7 @@ async function loadOrders() {
       return `
       <div class="order-card" style="animation-delay: ${i * 0.05}s">
         <div class="order-card__top">
-          <span class="order-card__id">Order #${order.id}</span>
+          <span class="order-card__id">Order #${order.dailyOrderNumber || order.id}</span>
           <span class="order-card__time">${formatTime(order.timestamp)}</span>
         </div>
         <div class="order-card__customer">

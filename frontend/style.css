@@ -194,6 +194,18 @@ ul {
   transition: var(--transition);
 }
 
+.navbar__toggle.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.navbar__toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar__toggle.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 /* ============================================
    HERO SECTION
    ============================================ */
@@ -1048,30 +1060,68 @@ ul {
    ============================================ */
 @media (max-width: 768px) {
   .navbar {
-    padding: 0 20px;
+    padding: 0 16px;
+    height: 64px; /* Slightly shorter on mobile */
+  }
+
+  .navbar__logo {
+    font-size: 1.3rem;
+    gap: 8px;
+  }
+
+  .navbar__logo-icon {
+    font-size: 1.5rem;
   }
 
   .navbar__links {
     position: fixed;
-    top: 72px;
+    top: 64px; /* Match new navbar height */
     left: 0;
     right: 0;
     flex-direction: column;
-    background: rgba(13, 13, 26, 0.98);
-    backdrop-filter: blur(20px);
-    padding: 20px;
-    gap: 4px;
-    transform: translateY(-120%);
-    transition: var(--transition);
-    border-bottom: 1px solid var(--border);
+    background: rgba(7, 7, 15, 0.98); /* Solid dark for luxury feel */
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    padding: 24px;
+    gap: 12px; /* Better touch spacing */
+    transform: translateY(-110%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
+                opacity 0.4s ease,
+                visibility 0.4s;
+    border-bottom: 1px solid var(--border-gold);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    z-index: 999;
   }
 
   .navbar__links.open {
     transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navbar__link {
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+    font-size: 1rem;
+    border: 1px solid transparent;
+  }
+
+  .navbar__link--cart {
+    justify-content: center;
+    margin-top: 8px;
+    background: rgba(245, 158, 11, 0.05);
   }
 
   .navbar__toggle {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-right: -8px;
   }
 
   .hero {

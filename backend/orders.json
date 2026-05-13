@@ -88,5 +88,37 @@
     "totalPrice": 45.33,
     "timestamp": "2026-04-20T16:45:15.200Z",
     "status": "completed"
+  },
+  {
+    "id": 10,
+    "dailyOrderNumber": 1,
+    "customerName": "Test User",
+    "tableNumber": "5",
+    "items": [
+      {
+        "name": "Test Item",
+        "price": 10,
+        "quantity": 1
+      }
+    ],
+    "totalPrice": 10.8,
+    "timestamp": "2026-05-13T15:53:38.848Z",
+    "status": "pending"
+  },
+  {
+    "id": 11,
+    "dailyOrderNumber": 2,
+    "customerName": "Test User",
+    "tableNumber": "5",
+    "items": [
+      {
+        "name": "Test Item",
+        "price": 10,
+        "quantity": 1
+      }
+    ],
+    "totalPrice": 10.8,
+    "timestamp": "2026-05-13T15:53:44.447Z",
+    "status": "pending"
   }
 ]

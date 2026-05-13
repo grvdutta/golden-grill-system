@@ -439,7 +439,7 @@ function showOrderSuccess(order) {
       <div class="order-success__icon">🎉</div>
       <h2 class="order-success__title">Order Placed!</h2>
       <p class="order-success__text">
-        Thanks, <strong>${order.customerName}</strong>! Your order #${order.id} for <strong>Table ${order.tableNumber}</strong> is being prepared.<br>
+        Thanks, <strong>${order.customerName}</strong>! Your order <strong>#${order.dailyOrderNumber || order.id}</strong> for <strong>Table ${order.tableNumber}</strong> is being prepared.<br>
         Total: <strong style="color: var(--gold);">${formatPrice(order.totalPrice)}</strong>
       </p>
       <a href="index.html" class="btn btn--primary">Back to Home 🏠</a>
