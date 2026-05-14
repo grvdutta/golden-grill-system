@@ -91,8 +91,8 @@ npm start
 ```
 
 ### 4. Access the Apps
-- **Customer Site**: [http://localhost:3000](http://localhost:3000)
-- **Admin Dashboard**: [http://localhost:3000/admin/login.html](http://localhost:3000/admin/login.html)
+- **Customer Site**: [https://golden-grill-system.netlify.app/]
+- **Admin Dashboard**: [https://golden-grill-system.netlify.app/admin/login.html]
   - *Login*: `admin`
   - *Password*: `admin123`
 
