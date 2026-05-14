@@ -96,5 +96,19 @@ npm start
   - *Login*: `admin`
   - *Password*: `admin123`
 
+## 📸 Screenshots
+
+### Homepage
+![Homepage](assets/screenshots/homepg.jpeg)
+
+### Menu Section
+![Menu](assets/screenshots/menu.jpeg)
+
+### Mobile View
+![Mobile View](assets/screenshots/homepg(mobile).jpeg)
+
+### Admin View
+![Admin View](assets/screenshots/adminpg.jpeg)
+
 ## 👨‍💻 Author
 **Gaurav Dutta**
